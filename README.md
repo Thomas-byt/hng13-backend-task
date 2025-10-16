@@ -19,24 +19,24 @@ The purpose of this project is to demonstrate backend development skills such as
 **Base URL:**
 
 ```
-https://<your-app-name>.up.railway.app
+https://web-production-49b5.up.railway.app
 ```
 
 **GET /me:**
 
 ```
-https://<your-app-name>.up.railway.app/me
+https://web-production-49b5.up.railway.app/me
 ```
 
 ---
 
-### 🧾 Example Response
+###  Example Response
 
 ```json
 {
   "status": "success",
   "user": {
-    "email": "Darethomas96@gmail.com",
+    "email": "Thomasdreh@gmail.com",
     "name": "Osakinle Oluwadare Thomas",
     "stack": "Python/Flask"
   },
@@ -63,8 +63,8 @@ Follow these steps to run the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+https://github.com/Thomas-byt/hng13-backend-task.git
+cd https://github.com/Thomas-byt/hng13-backend-task.git
 
 # Create and activate virtual environment
 python -m venv venv
@@ -105,7 +105,7 @@ The project is deployed on **Railway.app** using the following setup:
 
 ###  Author
 
-**Name:** Osakinle Oluwadare Thomas
+**Name:** Osakinle Oluwadare Thomas, Esq
 **Email:** [Darethomas96@gmail.com](mailto:Darethomas96@gmail.com)
 **Stack:** Python/Flask
 **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/)
@@ -127,7 +127,6 @@ Through this project, I learned:
 ### Acknowledgements
 
 * [Cat Facts API](https://catfact.ninja/fact) — for providing random cat facts.
-* [HNG Internship](https://hng.tech) — for organizing this backend learning challenge.
+* [HNG Internship](https://hng.tech) — for organising this backend learning challenge.
 
 
-Would you like me to fill in your *real live Railway link* in the README and polish it for your final GitHub push?
