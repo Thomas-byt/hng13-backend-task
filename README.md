@@ -1,56 +1,133 @@
-# Overview
-This project is my Stage 0 task for the **HNG13 Backend Track**.
-It's a simple RESTFUL API built with **Python (Flask)** that returns my profile information and a random cat fact fetched from an external API.
+##  Backend Wizards — Stage 0 Task: Dynamic Profile Endpoint
 
-___
+###  Project Overview
 
-## Endpoint
-**GET** `/me`
-Returns a JSON response with: 
-- My user details (email, name, stack)
-- A dynamic cat fact from the Cat Facts API
-- Current UTC timestamp
+This project was built as part of the **HNG13 Backend Track (Stage 0)** challenge.
+It is a simple RESTful API built with **Python (Flask)** that returns dynamic user information along with a random cat fact fetched from a third-party API — [Cat Facts API](https://catfact.ninja/fact).
 
-Example response
-````json
+The purpose of this project is to demonstrate backend development skills such as:
+
+* Creating RESTful endpoints
+* Fetching and handling external API data
+* Formatting dynamic JSON responses
+* Deploying APIs to a live hosting platform (Railway)
+
+---
+
+### Live Endpoint
+
+**Base URL:**
+
+```
+https://<your-app-name>.up.railway.app
+```
+
+**GET /me:**
+
+```
+https://<your-app-name>.up.railway.app/me
+```
+
+---
+
+### 🧾 Example Response
+
+```json
 {
-"status": "success",
-"user": {
-"email": "Thomasdreh@gmail.com",
-"name": "Osakinle Oluwadare Thomas"
-"stack": "Python/Flask"
-},
-"timestamp": "2025-10-16T12:34:56.7892",
-"fact": "Cats sleep for 70% of their lives."
+  "status": "success",
+  "user": {
+    "email": "Darethomas96@gmail.com",
+    "name": "Osakinle Oluwadare Thomas",
+    "stack": "Python/Flask"
+  },
+  "timestamp": "2025-10-16T15:48:02.657Z",
+  "fact": "Cats sleep for about 70% of their lives."
+}
+```
 
-Tech Stack
-Language: Python
-Framework: Flask
-External API: Cat Facts API
-Hosting: Railway
 
-Setup Instructions
-1. Clone the repository
-git clone https://github.com/Thomas-byt/hng13-backend-task.git
-cd hng13-backend-task
 
-2. Install dependencies
+###  Tech Stack
+
+* **Language:** Python
+* **Framework:** Flask
+* **Web Server:** Gunicorn
+* **Hosting:** Railway
+* **External API:** [Cat Facts API](https://catfact.ninja/fact)
+
+---
+
+###  Installation & Local Setup
+
+Follow these steps to run the project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+
+# Create and activate virtual environment
+python -m venv venv
+venv\Scripts\activate   # (Windows)
+# or
+source venv/bin/activate  # (Mac/Linux)
+
+# Install dependencies
 pip install -r requirements.txt
 
-3 Run the app locally
+# Run the Flask app locally
 python app.py
-visit: http://127.0.0.1:5000/me
+```
 
-Live Demo
-https://your-railway-app-url.up.railway.app/me
+The app will start running on:
 
-Contact
-Name: Osakinle Oluwadare Thomas
-Email: Thomasdreh@gmail.com
-Stack: Python/Flask
+```
+http://127.0.0.1:8000/me
+```
 
-What I learned
-1. How to build a RESTful API endpoint
-2. How to consume external APIs dynamically
-How to return JSON responses and handle errors
-How to deploy a live app using Railway
+---
+
+### Deployment
+
+The project is deployed on **Railway.app** using the following setup:
+
+* `Procfile` → `web: gunicorn app:app`
+* `runtime.txt` → `python-3.10.13`
+* `requirements.txt` includes Flask, Gunicorn, and Requests
+* Port handled dynamically via:
+
+  ```python
+  port = int(os.environ.get("PORT", 8000))
+  app.run(host="0.0.0.0", port=port)
+  ```
+
+---
+
+###  Author
+
+**Name:** Osakinle Oluwadare Thomas
+**Email:** [Darethomas96@gmail.com](mailto:Darethomas96@gmail.com)
+**Stack:** Python/Flask
+**LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/)
+**GitHub:** [Your GitHub Profile](https://github.com/)
+
+
+
+### What I Learned
+
+Through this project, I learned:
+
+* How RESTful APIs communicate and serve JSON data.
+* How to integrate external APIs dynamically.
+* How to deploy Python Flask apps on a live server (Railway).
+* The importance of error handling and dynamic environment configuration.
+
+
+
+### Acknowledgements
+
+* [Cat Facts API](https://catfact.ninja/fact) — for providing random cat facts.
+* [HNG Internship](https://hng.tech) — for organizing this backend learning challenge.
+
+
+Would you like me to fill in your *real live Railway link* in the README and polish it for your final GitHub push?
