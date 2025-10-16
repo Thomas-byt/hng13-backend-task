@@ -19,17 +19,21 @@ def my_profile():
 
     # --- 4. Prepare profile data
     profile_data = {
-        "name": "Dare Thomas Osakinle",
-        "age": 30,
-        "occupation": "Lawyer (Energy Law)",
-        "hobbies": ["Legal Research", "Public Speaking", "Music"],
-        "cat_fact": cat_fact,
-        "timestamp": datetime.utcnow().isoformat() + 'Z'  # Current timestamp in ISO format
+        "status": "success",
+        "user":{
+            "email": "Thomasdreh@gmail.com",
+            "name": "Dare Thomas Osakinle",
+            "stack": "Python/Flask"},
+            "timestamp": datetime.utcnow().isoformat() + 'Z',  # Current timestamp in ISO format
+            "fact": cat_fact
+
     }
 
     # ----5. Send the report back to the client ----
     return jsonify(profile_data), 200 # 200 OK status code
 #--- 6. Run the app
 if __name__ == '__main__':
-    app.run(debug=True) # Run the app in debug mode for development
+   port = int(os.environ.get("PORT", 8000))
+   app.run(host="0.0.0.0", port=port)
+    ##app.run(debug=True) # Run the app in debug mode for development
     
