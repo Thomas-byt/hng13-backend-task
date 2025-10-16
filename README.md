@@ -37,7 +37,7 @@ https://web-production-49b5.up.railway.app/me
   "status": "success",
   "user": {
     "email": "Thomasdreh@gmail.com",
-    "name": "Osakinle Oluwadare Thomas",
+    "name": "Dare Thomas Osakinle",
     "stack": "Python/Flask"
   },
   "timestamp": "2025-10-16T15:48:02.657Z",
