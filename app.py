@@ -7,7 +7,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 #--- 3. Create frontend route
-@app.route('/cat', methods=['GET'])
+@app.route('/me', methods=['GET'])
 def my_profile():
     try:
         # Fetch data from external API
