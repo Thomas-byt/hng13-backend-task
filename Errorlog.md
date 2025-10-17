@@ -3,9 +3,9 @@
 
 ```markdown
 # 🧰 Stage 0 — Error & Solution Log  
-**Project:** Dynamic Profile Endpoint (HNG13 Backend Track)  
-**Stack:** Python (Flask + Gunicorn)  
-**Hosting:** Railway.app  
+Project: Dynamic Profile Endpoint (HNG13 Backend Track)  
+Stack: Python (Flask + Gunicorn)  
+Hosting: Railway.app  
 
 This section documents the common errors I faced during the setup, development, and deployment of my `/me` endpoint — and how I resolved each of them.  
 It serves as a reference for my future projects and for anyone encountering similar issues.  
@@ -13,30 +13,30 @@ It serves as a reference for my future projects and for anyone encountering simi
 ---
 
 ## ⚙️ Overview  
-- **Endpoint:** `/me`  
-- **Purpose:** Return dynamic JSON containing profile data, current timestamp, and a live cat fact from an external API.  
-- **Files involved:** `app.py`, `Procfile`, `requirements.txt`, `README.md`  
+- Endpoint: `/me`  
+- Purpose: Return dynamic JSON containing profile data, current timestamp, and a live cat fact from an external API.  
+- Files involved: `app.py`, `Procfile`, `requirements.txt`, `README.md`  
 
 ---
 
-## 🧩 1. Error — *“No repositories found” on Railway*  
-**Cause:** Railway didn’t have permission to access my GitHub repositories.  
-**Solution:**  
-- Granted repository access under **GitHub → Settings → Applications → Authorized OAuth Apps → Railway**.  
+## 🧩 1. Error — “No repositories found” on Railway  
+Cause: Railway didn’t have permission to access my GitHub repositories.  
+Solution:  
+- Granted repository access under GitHub → Settings → Applications → Authorized OAuth Apps → Railway.  
 - Reconnected Railway to GitHub.  
 ✅ Railway successfully fetched my repositories.
 
 ---
 
-## 🧩 2. Error — *“Railway CLI not installed / Revoke access”*  
-**Cause:** Old or incomplete GitHub–Railway connection.  
-**Solution:** Revoked old access, reconnected Railway, and authorized the correct GitHub account.  
+## 🧩 2. Error — “Railway CLI not installed / Revoke access”  
+Cause: Old or incomplete GitHub–Railway connection.  
+Solution: Revoked old access, reconnected Railway, and authorized the correct GitHub account.  
 ✅ Fixed by reconnecting the integration.
 
 ---
 
-## 🧩 3. Error — *YAML syntax error in Procfile*  
-**Error Message:**  
+## 🧩 3. Error — YAML syntax error in Procfile  
+Error Message:  
 ```
 
 ✖ Error reading Procfile as YAML: mapping values are not allowed in this context
