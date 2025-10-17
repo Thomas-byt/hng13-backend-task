@@ -42,8 +42,8 @@ Error Message:
 ✖ Error reading Procfile as YAML: mapping values are not allowed in this context
 
 ````
-**Cause:** Wrong format in `Procfile`.  
-**Fix:**  
+Cause: Wrong format in `Procfile`.  
+Fix:  
 ❌ Incorrect  
 ```yaml
 web:
@@ -56,14 +56,14 @@ web:
 web: gunicorn app:app
 ```
 
-**Lesson:** `Procfile` must be a single line — no YAML indentation or colons.
+Lesson: `Procfile` must be a single line — no YAML indentation or colons.
 
 ---
 
 ## 🧩 4. Error — *“No matching distribution found for nginx”*
 
-**Cause:** Added `nginx` in `requirements.txt`, which is not a Python package.
-**Fix:** Removed `nginx`.
+Cause: Added `nginx` in `requirements.txt`, which is not a Python package.
+Fix: Removed `nginx`.
 ✅ Final `requirements.txt`:
 
 ```
@@ -76,30 +76,30 @@ requests
 
 ## 🧩 5. Error — *“/bin/bash: gunicorn: command not found”*
 
-**Cause:** Gunicorn not installed because it wasn’t in `requirements.txt`.
-**Fix:** Added `gunicorn` and redeployed.
+Cause: Gunicorn not installed because it wasn’t in `requirements.txt`.
+Fix: Added `gunicorn` and redeployed.
 ✅ Application started successfully.
 
 ---
 
 ## 🧩 6. Error — *App deployed but URL showed “Not Found”*
 
-**Cause:** I visited the base URL (`/`) instead of the defined route `/me`.
-**Fix:** Accessed `https://yourappname.up.railway.app/me`.
+Cause: I visited the base URL (`/`) instead of the defined route `/me`.
+Fix: Accessed `https://yourappname.up.railway.app/me`.
 ✅ JSON response returned successfully.
 
 ---
 
 ## 🧩 7. Error — *App not binding to correct port*
 
-**Log:**
+Log:
 
 ```
 Listening at: http://0.0.0.0:8080 (1)
 ```
 
-**Cause:** Flask didn’t use the deployment port assigned by Railway.
-**Fix:** Added this block to `app.py`:
+Cause: Flask didn’t use the deployment port assigned by Railway.
+Fix: Added this block to `app.py`:
 
 ```python
 if __name__ == "__main__":
